@@ -31,9 +31,11 @@ var memory = (function(){
                     myLable.textContent = eval(tempMemory)-Number(memoryValue);
                 }
             break;
+
             case "recall":
                 resultBox.innerHTML = memoryValue;
             break;
+            
             case "clear":
                 if(memoryState == false){
                     memoryState = true;

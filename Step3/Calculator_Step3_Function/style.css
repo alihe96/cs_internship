@@ -368,10 +368,6 @@ header {
     color: #919191;
 }
 
-.mWhite {
-    color: gray;
-}
-
 .history,
 #mem {
     color: gray;
@@ -508,7 +504,7 @@ header {
 }
 
 .remove-history {
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     right: 0;
     bottom: 0;
