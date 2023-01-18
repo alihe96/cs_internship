@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Twitch Step3</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <div class="container">
+
+        <!-- weight -->
+        <div class="row">
+            <input type="range" min="10" max="180" value="10" id="weight">
+            <span id="weightValue">10-180 kg</span>
+        </div>
+
+        <!-- height -->
+        <div class="row">
+            <input type="range" min="100" max="220" value="100" id="height" >
+            <span id="heightValue">100-220 cm</span>
+        </div>
+
+
+        <!-- bmi result  -->
+        <p id="result"></p>
+        <p id="category"></p>
+
+    </div>
+
+    <!--Script-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
