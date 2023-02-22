@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Step4</title>
+</head>
+
+<body>
+    <header>
+        <div class="headerText">Calculator</div>
+        <div class="headerWin">
+            <div class="min"> &#8213 </div>
+            <div class="max">&#9723</div>
+            <div class="close">&#10005</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="leftSide">
+
+            <div class="topBox">
+                <div class="menu" onclick="changethem()"><img src="./images/menu.png" alt="burger"></div>
+                <div class="standard">Standard</div>
+                <div class="historyLogo"><img src="/images/history.png" alt="historyLogo"></div>
+            </div>
+
+            <div class="screen" id="screen"></div>
+            <div class="result" id="result">0</div>
+
+            <div class="memoryLine">
+                <div class="memoryClear" id="memoryClear">MC</div>
+                <div class="memoryRecall" id="memoryRecall">MR</div>
+                <div class="memoryPlus" id="memoryPlus">M+</div>
+                <div class="memoryMines" id="memoryMines">M-</div>
+                <div class="memorySaved" id="memorySaved">MS</div>
+                <div class="memoryHide" id="memoryHide">M&#9662</div>
+            </div>
+
+            <div class="buttons">
+
+                <div class="Operator" id="percent">%</div>
+                <div class="Operator" id="CE">CE</div>
+                <div class="Operator" id="C">C</div>
+                <div class="Operator" id="backspace"><img src="./images/backspace.png" alt="backspace"></div>
+                <div class="Operator" id="divide">&#xf7</div>
+
+                <div class="Operator" id="root">&#8730</div>
+                <div class="Number" id="seven">7</div>
+                <div class="Number" id="eight">8</div>
+                <div class="Number" id="nine">9</div>
+                <div class="Operator" id="multi">&#10005</div>
+
+                <div class="Operator" id="power2">&#120013&#178</div>
+                <div class="Number" id="four">4</div>
+                <div class="Number" id="five">5</div>
+                <div class="Number" id="six">6</div>
+                <div class="Operator" id="mines">-</div>
+
+                <div class="Operator" id="power3">&#120013&#179</div>
+                <div class="Number" id="one">1</div>
+                <div class="Number" id="two">2</div>
+                <div class="Number" id="three">3</div>
+                <div class="Operator" id="plus">+</div>
+
+                <div class="Operator" id="deduction">&#185/&#120013</div>
+                <div class="Operator" id="plusMines">&#177</div>
+                <div class="Number" id="zero">0</div>
+                <div class="Operator" id="point">.</div>
+                <div class="Operator" id="equal">=</div>
+            </div>
+
+        </div>
+
+        <div class="rightSide">
+            <div class="historyLine">
+                <div class="history">History</div>
+                <div class="memory">Memory</div>
+            </div>
+            <div class="nothing">There's no history yet</div>
+            <div id="recycle" class="recycle"><img src="./images/recycle.png" alt="recycle"></div>
+        </div>
+    </div>
+
+    <script src="/Javascript/theme.js"></script>
+</body>
+
+</html>

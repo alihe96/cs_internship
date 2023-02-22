@@ -1,0 +1,104 @@
+@mixin themeAble(
+  $theme-name,
+  $bgcolor: #e7e7e7,
+  $hover: #cfcfcf,
+  $font: "Segoe UI",
+  $numbercolor: white,
+  $opcolor: #f0f0f0,
+  $butradius: 5px,
+  $text: black,
+  $equal: #ff9f1a
+) {
+  .#{$theme-name} {
+    * {
+      font-family: $font;
+      color: $text;
+    }
+    header {
+      background: $bgcolor;
+    }
+    .min:hover {
+      background-color: $hover;
+    }
+    .max:hover {
+      background-color: $hover;
+    }
+    .container {
+      background: $bgcolor;
+    }
+    .menu:hover {
+      background-color: $hover;
+      border-radius: 4px;
+    }
+    .result {
+      font-family: $font;
+    }
+    .memoryLine div:hover {
+      background: $hover;
+      border-radius: 5px;
+    }
+    .buttons {
+      font-family: $font;
+      border-radius: $butradius;
+    }
+    .buttons div {
+      border-radius: $butradius;
+      font-family: $font;
+    }
+    .buttons div:hover {
+      background: $hover;
+    }
+
+    .Number {
+      background: $numbercolor;
+      font-family: $font;
+    }
+
+    .Operator {
+      background: $opcolor;
+      font-family: $font;
+    }
+    #equal {
+      background: $equal;
+    }
+
+    #equal:hover {
+      background: $hover;
+    }
+    .rightSide {
+      background: $bgcolor;
+    }
+
+    @media only screen and (max-width: 500px) {
+      .memoryHide:hover {
+        background: $hover;
+      }
+    }
+  }
+}
+
+@include themeAble($theme-name: light);
+
+@include themeAble(
+  $theme-name: dark,
+  $bgcolor: #181818,
+  $hover: #3a3b3c,
+  $font: "Segoe UI",
+  $numbercolor: #121212,
+  $opcolor: #282828,
+  $butradius: 10px / 30px,
+  $text: white,
+  $equal: #0984e3
+);
+
+@include themeAble(
+  $theme-name: navy,
+  $bgcolor: #192734,
+  $hover: #8899a6,
+  $font: "Segoe UI",
+  $numbercolor: #15202b,
+  $opcolor: #22303c,
+  $butradius: 5px 25px 15px,
+  $text: lightgray,
+  $equal: #3c6382
+);

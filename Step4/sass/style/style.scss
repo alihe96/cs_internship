@@ -1,0 +1,317 @@
+@import "themable";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: default;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 355px;
+  min-width: 500px;
+}
+
+/* header  */
+header {
+  height: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerText {
+  padding: 5px 0px 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.headerWin {
+  width: 320px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headerWin div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 30px;
+}
+
+.min {
+  font-size: 10px;
+  padding-bottom: 2px;
+}
+
+.close {
+  font-size: 14px;
+}
+
+.close:hover {
+  color: white;
+  background-color: red;
+}
+
+/* container  */
+.container {
+  width: 100%;
+  height: 96%;
+  display: grid;
+  grid-template-columns: 75% minmax(25%, 320px);
+}
+
+/* boxMenu  */
+.topBox {
+  height: 10%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.topBox div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu {
+  padding: 0 5px;
+}
+
+.menu img {
+  width: 80%;
+  height: 80%;
+}
+
+.standard {
+  font-size: large;
+  padding: 0 7px 0 7px;
+  font-weight: 500;
+}
+
+.historyLogo img {
+  width: 80%;
+  height: 80%;
+  display: none;
+}
+
+/* screen  */
+.screen {
+  height: 6%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: auto;
+  font-size: 15px;
+  padding-right: 7px;
+}
+
+/* result   */
+.result {
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-weight: bold;
+  margin-top: auto;
+  font-size: 250%;
+  padding-right: 7px;
+}
+
+/* memoryline  */
+.memoryLine {
+  height: 7%;
+  width: 48%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.memoryLine div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: var(--font);
+}
+
+#memoryRecall,
+#memoryClear {
+  color: gray;
+}
+
+#memoryHide {
+  display: none;
+}
+
+/* buttons  */
+.buttons {
+  height: 65%;
+  display: grid;
+  gap: 0.4%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.buttons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+#backspace {
+  font-size: large;
+}
+
+#divide,
+#plusMines,
+#root,
+#plus {
+  font-size: x-large;
+}
+
+#mines,
+#point {
+  font-size: xx-large;
+}
+
+#backspace img {
+  width: 25px;
+  height: 25px;
+}
+
+/* rightSide  */
+
+.historyLine {
+  display: flex;
+  padding: 20px 0 10px 0;
+  font-weight: 700;
+  font-size: medium;
+}
+
+.history {
+  padding: 7px 0 5px 0;
+}
+
+.memory {
+  margin-left: 10%;
+  padding: 7px 0 5px 0;
+}
+
+.recycle {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.nothing {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: medium;
+}
+
+/* MediaQuery  */
+
+@media only screen and (max-width: 500px) {
+  .container {
+    display: flex;
+  }
+
+  .rightSide {
+    display: none;
+  }
+
+  .leftSide {
+    width: 100%;
+  }
+
+  .historyLogo {
+    position: fixed;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    padding-top: 2px;
+  }
+
+  .result {
+    padding: 0 15px 15px 0;
+    font-weight: 650;
+  }
+
+  .screen {
+    padding: 0 15px 15px 0;
+  }
+
+  .memoryLine {
+    width: 100%;
+  }
+
+  .memoryLine {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .memoryHide {
+    display: grid !important;
+  }
+
+  #power3 {
+    display: none;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    grid-template-areas:
+      "a b c d"
+      "e f g h";
+  }
+
+  #percent {
+    grid-area: a;
+  }
+
+  #CE {
+    grid-area: b;
+  }
+
+  #C {
+    grid-area: c;
+  }
+
+  #backspace {
+    grid-area: d;
+  }
+
+  #deduction {
+    grid-area: e;
+  }
+
+  #power2 {
+    grid-area: f;
+  }
+
+  #root {
+    grid-area: g;
+  }
+
+  #devide {
+    grid-area: h;
+  }
+
+  .recycle {
+    display: none;
+  }
+}
