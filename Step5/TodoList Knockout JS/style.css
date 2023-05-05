@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #636e72;
+}
+
+.content {
+    text-align: center;
+    font-size: xx-large;
+    margin: 8px;
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container {
+    background: #0be881;
+    text-align: center;
+    margin: 8px auto;
+    padding: 8px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+input[type="text"] {
+    width: 65%;
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    background: #dfe6e9;
+}
+
+.addTask {
+    margin: 0 6px 0 6px;
+}
+
+.addTask:hover {
+    background: #fbc531;
+}
+
+.statuses {
+    background: #dfe6e9;
+    outline: none;
+
+}
+
+.statuses:hover {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+select {
+    padding: 10px;
+    margin: -10px 0 0 -5px;
+    border: none;
+    border-radius: 7px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 7px;
+    background: #dfe6e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #636e72;
+}
+
+button:nth-child(2) {
+    background: #05c46b;
+    color: #000;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+button:last-child {
+    background: #f53b57;
+    color: #fff;
+}
+
+.deletebtn:hover {
+    background: #fbc531;
+}
+
+.editbtn:hover {
+    background: #fbc531;
+}
+
+.clearbtn {
+    margin-top: 20px;
+}
+
+.clearbtn:hover {
+    background: #fbc531;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 740px) {
+    input[type="text"] {
+        width: 60%;
+    }
+
+    .tasktext {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .addtodo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .addTask {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .statuses {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .tasktext {
+        font-size: 0.8rem;
+    }
+
+    .editbtn,
+    .deletebtn,
+    .clearbtn {
+        font-size: 0.6rem;
+    }
+}

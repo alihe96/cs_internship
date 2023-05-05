@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Ali Hesaraki</title>
+</head>
+
+<body>
+
+    <p class="content">Step 5</p>
+
+    <div class="container">
+        <div class="addtodo">
+            <input type="text" data-bind="value: newTask, valueUpdate: 'afterkeydown'" placeholder="Add new task " />
+            <button data-bind="click: addTask" class="addTask">Add task</button>
+            <select data-bind="options: statuses, value: selectedStatus" class="statuses"></select>
+        </div>
+
+        <ul data-bind="foreach: filteredTasks">
+            <li class="task">
+
+                <label>
+                    <input type="checkbox" data-bind="checked: status" />
+                    <span data-bind="text: text, css: {completed: status}" class="tasktext"></span>
+                </label>
+
+                <button data-bind="click: $parent.editTask.bind($parent)" class="editbtn">
+                    Edit
+                </button>
+
+                <button data-bind="click: $parent.removeTask.bind($parent)" class="deletebtn">
+                    Delete
+                </button>
+
+            </li>
+        </ul>
+
+        <button data-bind="click: removeAllTasks" class="clearbtn">
+            Delete all
+        </button>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
