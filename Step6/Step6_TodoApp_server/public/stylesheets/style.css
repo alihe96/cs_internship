@@ -166,7 +166,7 @@ li {
 
 .down-btn {
   width: 49%;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 .down-btn:hover {
@@ -175,8 +175,7 @@ li {
 
 .up-btn {
   width: 49%;
-  visibility: hidden;
-
+  /* visibility: hidden; */
 }
 
 .up-btn:hover {
